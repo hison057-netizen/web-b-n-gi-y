@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Giao diện quản trị website bán giày online."
+    />
+    <title>Admin | SoleMate</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1.5" />
+        <rect x="14" y="3" width="7" height="7" rx="1.5" />
+        <rect x="3" y="14" width="7" height="7" rx="1.5" />
+        <rect x="14" y="14" width="7" height="7" rx="1.5" />
+      </symbol>
+      <symbol id="icon-box" viewBox="0 0 24 24">
+        <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+        <path d="m3 8 9 5 9-5M3 8v9l9 5 9-5V8M12 13v9" />
+      </symbol>
+      <symbol id="icon-warehouse" viewBox="0 0 24 24">
+        <path d="m3 10 9-7 9 7v11H3V10Z" />
+        <path d="M9 21v-7h6v7M3 10h18" />
+      </symbol>
+      <symbol id="icon-cart" viewBox="0 0 24 24">
+        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6" />
+        <circle cx="10" cy="21" r="1" />
+        <circle cx="18" cy="21" r="1" />
+      </symbol>
+      <symbol id="icon-tag" viewBox="0 0 24 24">
+        <path d="M20.6 13.4 13 21l-10-10V3h8l9.6 9.6a.6.6 0 0 1 0 .8Z" />
+        <circle cx="7.5" cy="7.5" r="1.2" />
+      </symbol>
+      <symbol id="icon-headset" viewBox="0 0 24 24">
+        <path d="M3 13v-1a9 9 0 0 1 18 0v1" />
+        <path d="M5 13h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2ZM17 13h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2ZM17 20a5 5 0 0 1-5 2" />
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M3 3v18h18" />
+        <path d="m7 14 4-4 4 3 6-7" />
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.8 1l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.8-1l-1.7.7-1.4-2.4 1.4-1.1a7 7 0 0 1 0-2l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.8-1l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.8 1l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1 0 2Z" transform="translate(-1 -1)" />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6M23 11h-6" />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+        <path d="M14 2v6h6M8 13h8M8 17h8" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m20 20-4-4" />
+      </symbol>
+      <symbol id="icon-bell" viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m9 18 6-6-6-6" />
+      </symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+        <path d="M7 17 17 7M7 7h10v10" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="icon-more" viewBox="0 0 24 24">
+        <circle cx="5" cy="12" r="1" />
+        <circle cx="12" cy="12" r="1" />
+        <circle cx="19" cy="12" r="1" />
+      </symbol>
+    </svg>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="SoleMate trang chủ">
+          <span class="brand-mark">S</span>
+          <span class="brand-name">sole<span>mate</span></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <div class="sidebar-group">
+          <div class="nav-caption">Tổng quan</div>
+          <a class="nav-link active" href="#overview" aria-current="page">
+            <svg class="icon"><use href="#icon-grid" /></svg>
+            <span>Dashboard</span>
+          </a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="nav-caption">Cửa hàng</div>
+          <a class="nav-link" href="#products">
+            <svg class="icon"><use href="#icon-box" /></svg>
+            <span>Quản lý sản phẩm</span>
+            <span class="nav-count">128</span>
+          </a>
+          <a class="nav-link" href="#inventory">
+            <svg class="icon"><use href="#icon-warehouse" /></svg>
+            <span>Quản lý kho</span>
+          </a>
+          <a class="nav-link" href="#orders">
+            <svg class="icon"><use href="#icon-cart" /></svg>
+            <span>Đơn hàng</span>
+            <span class="nav-count alert">8</span>
+          </a>
+          <a class="nav-link" href="#marketing">
+            <svg class="icon"><use href="#icon-tag" /></svg>
+            <span>Marketing</span>
+          </a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="nav-caption">Vận hành</div>
+          <a class="nav-link" href="#customers">
+            <svg class="icon"><use href="#icon-headset" /></svg>
+            <span>Chăm sóc khách hàng</span>
+          </a>
+          <a class="nav-link" href="#accounting">
+            <svg class="icon"><use href="#icon-chart" /></svg>
+            <span>Kế toán &amp; báo cáo</span>
+          </a>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="nav-caption">Hệ thống</div>
+          <a class="nav-link" href="#users">
+            <svg class="icon"><use href="#icon-users" /></svg>
+            <span>Người dùng &amp; phân quyền</span>
+          </a>
+          <a class="nav-link" href="#content">
+            <svg class="icon"><use href="#icon-file" /></svg>
+            <span>Nội dung website</span>
+          </a>
+          <a class="nav-link" href="#settings">
+            <svg class="icon"><use href="#icon-settings" /></svg>
+            <span>Cài đặt hệ thống</span>
+          </a>
+        </div>
+
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-icon">?</div>
+            <div>
+              <strong>Cần hỗ trợ?</strong>
+              <span>Liên hệ đội ngũ của chúng tôi</span>
+            </div>
+            <svg class="icon"><use href="#icon-chevron" /></svg>
+          </div>
+          <button class="profile-card" type="button">
+            <span class="avatar avatar-admin">AM</span>
+            <span class="profile-copy">
+              <strong>Admin Manager</strong>
+              <span>Super Admin</span>
+            </span>
+            <svg class="icon"><use href="#icon-more" /></svg>
+          </button>
+        </div>
+      </aside>
+
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="topbar-start">
+            <button class="icon-button mobile-menu" id="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+              <svg class="icon"><use href="#icon-menu" /></svg>
+            </button>
+            <div class="breadcrumb"><span>Trang chủ</span><b>/</b><strong>Tổng quan</strong></div>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <svg class="icon"><use href="#icon-search" /></svg>
+              <input type="search" placeholder="Tìm kiếm..." aria-label="Tìm kiếm" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <button class="icon-button notification-button" type="button" aria-label="Thông báo">
+              <svg class="icon"><use href="#icon-bell" /></svg>
+              <i></i>
+            </button>
+            <span class="topbar-divider"></span>
+            <button class="topbar-user" type="button">
+              <span class="avatar avatar-admin">AM</span>
+              <span class="topbar-user-copy"><strong>Admin Manager</strong><small>Quản trị viên</small></span>
+              <span class="user-chevron">⌄</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="page-heading">
+            <div>
+              <div class="eyebrow"><span class="status-dot"></span> THỨ NĂM, 12 THÁNG 11, 2026</div>
+              <h1>Chào buổi sáng, Admin <span>✦</span></h1>
+              <p>Đây là những gì đang diễn ra với cửa hàng của bạn hôm nay.</p>
+            </div>
+            <button class="button button-primary" type="button">
+              <svg class="icon"><use href="#icon-plus" /></svg>
+              Thêm sản phẩm
+            </button>
+          </section>
+
+          <section class="metrics-grid" aria-label="Chỉ số tổng quan">
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-label">Doanh thu</span>
+                <span class="metric-icon revenue-icon">₫</span>
+              </div>
+              <div class="metric-value">₫128.450.000</div>
+              <div class="metric-foot"><span class="trend positive"><svg class="icon"><use href="#icon-arrow-up" /></svg> 12,8%</span><span>so với tháng trước</span></div>
+              <div class="sparkline sparkline-blue"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-label">Đơn hàng</span>
+                <span class="metric-icon orders-icon"><svg class="icon"><use href="#icon-cart" /></svg></span>
+              </div>
+              <div class="metric-value">1.284</div>
+              <div class="metric-foot"><span class="trend positive"><svg class="icon"><use href="#icon-arrow-up" /></svg> 8,2%</span><span>so với tháng trước</span></div>
+              <div class="sparkline sparkline-purple"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-label">Khách hàng mới</span>
+                <span class="metric-icon customers-icon"><svg class="icon"><use href="#icon-users" /></svg></span>
+              </div>
+              <div class="metric-value">356</div>
+              <div class="metric-foot"><span class="trend positive"><svg class="icon"><use href="#icon-arrow-up" /></svg> 4,6%</span><span>so với tháng trước</span></div>
+              <div class="sparkline sparkline-green"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-label">Sản phẩm đang bán</span>
+                <span class="metric-icon products-icon"><svg class="icon"><use href="#icon-box" /></svg></span>
+              </div>
+              <div class="metric-value">2.450</div>
+              <div class="metric-foot"><span class="metric-neutral">18 sản phẩm mới</span><span>trong tháng này</span></div>
+              <div class="sparkline sparkline-orange"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+          </section>
+
+          <section class="overview-grid">
+            <article class="panel revenue-panel">
+              <div class="panel-heading">
+                <div>
+                  <h2>Tổng quan doanh thu</h2>
+                  <p>Hiệu suất kinh doanh trong 12 tháng qua</p>
+                </div>
+                <button class="select-button" type="button">Năm nay <span>⌄</span></button>
+              </div>
+              <div class="chart-summary"><strong>₫1.284.500.000</strong><span class="trend positive"><svg class="icon"><use href="#icon-arrow-up" /></svg> 18,4%</span><small>so với năm trước</small></div>
+              <div class="chart">
+                <div class="chart-y-labels"><span>₫150tr</span><span>₫100tr</span><span>₫50tr</span><span>₫0</span></div>
+                <div class="chart-plot">
+                  <div class="chart-gridline"><span></span><span></span><span></span><span></span></div>
+                  <div class="chart-bars" aria-label="Biểu đồ doanh thu theo tháng">
+                    <div class="bar-item"><div class="bar"><i style="height: 38%"></i><i style="height: 28%"></i></div><span>T1</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 50%"></i><i style="height: 36%"></i></div><span>T2</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 43%"></i><i style="height: 31%"></i></div><span>T3</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 66%"></i><i style="height: 43%"></i></div><span>T4</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 54%"></i><i style="height: 41%"></i></div><span>T5</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 73%"></i><i style="height: 53%"></i></div><span>T6</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 61%"></i><i style="height: 47%"></i></div><span>T7</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 82%"></i><i style="height: 59%"></i></div><span>T8</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 72%"></i><i style="height: 55%"></i></div><span>T9</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 91%"></i><i style="height: 69%"></i></div><span>T10</span></div>
+                    <div class="bar-item current"><div class="bar"><i style="height: 78%"></i><i style="height: 60%"></i></div><span>T11</span></div>
+                    <div class="bar-item"><div class="bar"><i style="height: 100%"></i><i style="height: 74%"></i></div><span>T12</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-legend"><span><i class="legend-dot primary-dot"></i>Năm nay</span><span><i class="legend-dot secondary-dot"></i>Năm trước</span></div>
+            </article>
+
+            <article class="panel stock-panel">
+              <div class="panel-heading">
+                <div>
+                  <h2>Tình trạng tồn kho</h2>
+                  <p>Theo dõi sản phẩm trong kho</p>
+                </div>
+                <button class="text-button" type="button">Xem kho <svg class="icon"><use href="#icon-chevron" /></svg></button>
+              </div>
+              <div class="stock-total"><strong>2.450</strong><span>sản phẩm</span><span class="stock-status"><i></i> Kho ổn định</span></div>
+              <div class="stock-bar"><span></span><span></span><span></span></div>
+              <div class="stock-legend">
+                <div><i class="stock-dot in-stock"></i><span>Còn hàng</span><strong>2.120</strong></div>
+                <div><i class="stock-dot low-stock"></i><span>Sắp hết hàng</span><strong>245</strong></div>
+                <div><i class="stock-dot out-stock"></i><span>Hết hàng</span><strong>85</strong></div>
+              </div>
+              <div class="low-stock-note">
+                <span class="warning-symbol">!</span>
+                <div><strong>12 sản phẩm sắp hết hàng</strong><span>Cần nhập thêm để tránh gián đoạn</span></div>
+                <svg class="icon"><use href="#icon-chevron" /></svg>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel orders-panel" id="orders">
+            <div class="panel-heading orders-heading">
+              <div>
+                <h2>Đơn hàng gần đây</h2>
+                <p>Cập nhật mới nhất từ cửa hàng của bạn</p>
+              </div>
+              <button class="text-button" type="button">Tất cả đơn hàng <svg class="icon"><use href="#icon-chevron" /></svg></button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>MÃ ĐƠN HÀNG</th><th>KHÁCH HÀNG</th><th>SẢN PHẨM</th><th>NGÀY ĐẶT</th><th>TỔNG TIỀN</th><th>TRẠNG THÁI</th><th></th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#order-1048" class="order-id">#SM-1048</a></td>
+                    <td><div class="customer-cell"><span class="avatar customer-a">MN</span><span><strong>Minh Nguyễn</strong><small>minh.nguyen@email.com</small></span></div></td>
+                    <td><div class="product-cell"><span class="shoe-thumb shoe-one">✦</span><span><strong>Nike Air Force 1 '07</strong><small>+ 1 sản phẩm khác</small></span></div></td>
+                    <td class="muted-cell">12 Th11, 2026</td><td class="amount-cell">₫3.450.000</td>
+                    <td><span class="badge badge-processing"><i></i>Đang xử lý</span></td>
+                    <td><button class="row-more" type="button" aria-label="Tùy chọn đơn hàng"><svg class="icon"><use href="#icon-more" /></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#order-1047" class="order-id">#SM-1047</a></td>
+                    <td><div class="customer-cell"><span class="avatar customer-b">TH</span><span><strong>Thu Hà</strong><small>thuha@gmail.com</small></span></div></td>
+                    <td><div class="product-cell"><span class="shoe-thumb shoe-two">✦</span><span><strong>Adidas Samba OG</strong><small>Size 38 · Trắng</small></span></div></td>
+                    <td class="muted-cell">12 Th11, 2026</td><td class="amount-cell">₫2.890.000</td>
+                    <td><span class="badge badge-shipping"><i></i>Đang giao</span></td>
+                    <td><button class="row-more" type="button" aria-label="Tùy chọn đơn hàng"><svg class="icon"><use href="#icon-more" /></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#order-1046" class="order-id">#SM-1046</a></td>
+                    <td><div class="customer-cell"><span class="avatar customer-c">QA</span><span><strong>Quốc Anh</strong><small>anh.quoc@email.com</small></span></div></td>
+                    <td><div class="product-cell"><span class="shoe-thumb shoe-three">✦</span><span><strong>New Balance 530</strong><small>+ 2 sản phẩm khác</small></span></div></td>
+                    <td class="muted-cell">11 Th11, 2026</td><td class="amount-cell">₫5.270.000</td>
+                    <td><span class="badge badge-complete"><i></i>Hoàn thành</span></td>
+                    <td><button class="row-more" type="button" aria-label="Tùy chọn đơn hàng"><svg class="icon"><use href="#icon-more" /></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#order-1045" class="order-id">#SM-1045</a></td>
+                    <td><div class="customer-cell"><span class="avatar customer-d">LT</span><span><strong>Lan Trần</strong><small>lan.tran@gmail.com</small></span></div></td>
+                    <td><div class="product-cell"><span class="shoe-thumb shoe-four">✦</span><span><strong>Converse Chuck 70</strong><small>Size 37 · Đen</small></span></div></td>
+                    <td class="muted-cell">11 Th11, 2026</td><td class="amount-cell">₫1.950.000</td>
+                    <td><span class="badge badge-cancelled"><i></i>Đã hủy</span></td>
+                    <td><button class="row-more" type="button" aria-label="Tùy chọn đơn hàng"><svg class="icon"><use href="#icon-more" /></svg></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-footer"><span>Hiển thị <strong>4</strong> trên <strong>1.284</strong> đơn hàng</span><div class="pagination"><button type="button" disabled aria-label="Trang trước">‹</button><button type="button" class="page-active">1</button><button type="button">2</button><button type="button">3</button><span>...</span><button type="button">12</button><button type="button" aria-label="Trang sau">›</button></div></div>
+          </section>
+
+          <footer class="page-footer"><span>© 2026 SoleMate Admin</span><span>Thiết kế để quản lý cửa hàng tốt hơn <b>♥</b></span></footer>
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
